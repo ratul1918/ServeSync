@@ -4,11 +4,15 @@ import { Mail, Lock, ArrowRight, Chrome, Github } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { useAuth } from "../contexts/AuthContext";
+
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,8 +22,21 @@ export default function SignInPage() {
         password
       });
       console.log("Sign in success:", response.data);
-      alert("Login successful!");
-      navigate('/'); // Redirect to home or dashboard
+      // Assuming response.data contains { token, user } or similar
+      // Adjust based on actual backend response structure
+      const { token, user } = response.data;
+      if (token && user) {
+        login(token, user);
+        alert("Login successful!");
+        navigate('/dashboard');
+      } else {
+        // Fallback if backend structure is different (e.g. just user info for now)
+        // For prototype, we might fake a token if backend doesn't return one yet
+        const fakeToken = "dummy-jwt-token";
+        login(fakeToken, response.data.user || { email, role: 'ADMIN' });
+        alert("Login successful!");
+        navigate('/dashboard');
+      }
     } catch (error: any) {
       console.error("Sign in error:", error);
       alert(error.response?.data?.message || "Login failed");
