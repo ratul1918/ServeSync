@@ -270,7 +270,7 @@ For support, questions, or feedback, please contact the development team.
 
 <div align="center">
 
-### Built with ❤️ by Ratul Rahman
+### Built by Ratul Rahman
 
 **ServeSync** - Transforming Restaurant Management
 
