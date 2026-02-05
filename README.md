@@ -120,7 +120,7 @@ ServeSync/
 ├── src/
 │   ├── components/
 │   │   ├── ui/                 # 50+ reusable UI components
-│   │   ├── figma/              # Image components
+│   │   ├── utilities/          # Utility components (Image handling)
 │   │   ├── DashboardPreview.tsx
 │   │   ├── Features.tsx
 │   │   ├── Footer.tsx
