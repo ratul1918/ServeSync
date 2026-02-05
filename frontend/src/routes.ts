@@ -5,6 +5,7 @@ import PricingPage from "./pages/PricingPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import AboutPage from "./pages/AboutPage";
 import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
 
 export const router = createBrowserRouter([
   {
@@ -30,5 +31,9 @@ export const router = createBrowserRouter([
   {
     path: "/signin",
     Component: SignInPage,
+  },
+  {
+    path: "/signup",
+    Component: SignUpPage,
   },
 ]);

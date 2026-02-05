@@ -1,17 +1,29 @@
 import { motion } from "motion/react";
 import { Navbar } from "../components/Navbar";
 import { Mail, Lock, ArrowRight, Chrome, Github } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useState } from "react";
+import axios from "axios";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle sign in logic here
-    console.log("Sign in with:", email, password);
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/signin', {
+        email,
+        password
+      });
+      console.log("Sign in success:", response.data);
+      alert("Login successful!");
+      navigate('/'); // Redirect to home or dashboard
+    } catch (error: any) {
+      console.error("Sign in error:", error);
+      alert(error.response?.data?.message || "Login failed");
+    }
   };
 
   return (
@@ -169,9 +181,9 @@ export default function SignInPage() {
               <div className="mt-8 text-center">
                 <p className="text-sm text-muted-foreground">
                   Don't have an account?{' '}
-                  <a href="#" className="text-neon-green font-semibold hover:underline">
+                  <Link to="/signup" className="text-neon-green font-semibold hover:underline">
                     Start free trial
-                  </a>
+                  </Link>
                 </p>
               </div>
             </motion.div>
