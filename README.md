@@ -5,6 +5,8 @@
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/ratul1918/ServeSync)
 [![React](https://img.shields.io/badge/React-18.3.1-61dafb?logo=react)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-6.3.5-646cff?logo=vite)](https://vitejs.dev)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js)](https://nodejs.org)
+[![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express)](https://expressjs.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss)](https://tailwindcss.com)
 
@@ -20,12 +22,14 @@
 
 ServeSync is a comprehensive restaurant management SaaS application built with modern web technologies. It provides an intuitive interface for managing restaurant operations, staff, inventory, and customer relationships efficiently.
 
+The project is structured as a monorepo with a distinct **Frontend** (React + Vite) and **Backend** (Node.js + Express).
+
 ### ✨ Key Highlights
 - 🚀 **Lightning Fast** - Built with Vite for instant development experience
 - 🎨 **Beautiful UI** - Modern design with extensive component library
+- 🔐 **Secure Auth** - Custom authentication system
 - 📊 **Real-time Insights** - Interactive dashboards with charts and analytics
-- 🎭 **Dark Mode** - Seamless theme switching with Next Themes
-- ♿ **Accessible** - Built with Radix UI for accessibility standards
+- 🎭 **Dark Mode** - Seamless theme switching
 - 📱 **Responsive** - Mobile-first design approach
 - 🔧 **Type Safe** - Full TypeScript support
 
@@ -39,77 +43,65 @@ ServeSync is a comprehensive restaurant management SaaS application built with m
 - **Performance Tracking** - Track restaurant operations and statistics
 
 ### 🎯 Core Management
-- **Multi-page Application** - Home, Features, Pricing, About, Resources, and Sign-in pages
+- **Authentication** - Secure Sign Up and Sign In flows
+- **Multi-page Application** - Home, Features, Pricing, About, Resources
 - **Responsive Navigation** - Intuitive navbar with mobile support
 - **Theme Support** - Light and dark mode toggle
-- **Feature Showcase** - Comprehensive features and how-it-works sections
 
 ### 🛠️ Advanced UI Components
 - **50+ UI Components** - Pre-built, customizable components
 - **Form Management** - React Hook Form integration
-- **Modal & Dialog System** - Alert dialogs, drawers, and popovers
 - **Data Display** - Tables, carousels, and scrollable areas
-- **Input Controls** - Comprehensive form controls and inputs
-
-### 🎨 Customization
-- **Tailwind CSS** - Utility-first CSS framework
-- **CVA** - Class Variance Authority for component variants
-- **Theme Context** - Global theme management
-- **Responsive Panels** - Resizable layout components
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend Framework
-- **React 18.3.1** - UI library with hooks support
-- **TypeScript** - Static type checking
-- **Vite 6.3.5** - Modern build tool with HMR
-- **React Router** - Client-side routing
+### Frontend
+- **Framework**: React 18.3.1, Vite 6.3.5
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, Radix UI, Lucide React
+- **Routing**: React Router DOM v7
+- **Forms**: React Hook Form
+- **HTTP Client**: Axios
 
-### UI & Styling
-- **Tailwind CSS** - Utility-first CSS framework
-- **Radix UI** - Accessible component primitives
-- **Lucide React** - Beautiful icon library
-- **Class Variance Authority** - Type-safe CSS class composition
-
-### Forms & State
-- **React Hook Form** - Efficient form handling
-- **Sonner** - Toast notifications
-- **Next Themes** - Theme management
-
-### Visualization
-- **Recharts** - Composable charting library
-- **Embla Carousel** - Carousel component
-
-### Developer Tools
-- **Vite** - Fast build tool
-- **SWC** - Fast JavaScript compiler
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Middleware**: CORS
+- **Dev Tools**: Nodemon
 
 ---
 
-## 📦 Installation
+## 🚦 Getting Started
 
 ### Prerequisites
-- Node.js 16+ 
+- Node.js 18+
 - npm or yarn
 
-### Setup
+### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/ratul1918/ServeSync.git
-cd ServeSync
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ratul1918/ServeSync.git
+   cd ServeSync
+   ```
 
-# Install dependencies
-npm install
+2. **Setup Backend**
+   ```bash
+   cd backend
+   npm install
+   npm run dev
+   # Server starts on http://localhost:5000
+   ```
 
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-```
+3. **Setup Frontend** (Open a new terminal)
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   # App runs on http://localhost:5173
+   ```
 
 ---
 
@@ -117,88 +109,23 @@ npm run build
 
 ```
 ServeSync/
-├── src/
-│   ├── components/
-│   │   ├── ui/                 # 50+ reusable UI components
-│   │   ├── utilities/          # Utility components (Image handling)
-│   │   ├── DashboardPreview.tsx
-│   │   ├── Features.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Hero.tsx
-│   │   ├── HowItWorks.tsx
-│   │   └── Navbar.tsx
-│   ├── pages/
-│   │   ├── Home.tsx
-│   │   ├── AboutPage.tsx
-│   │   ├── FeaturesPage.tsx
-│   │   ├── PricingPage.tsx
-│   │   ├── ResourcesPage.tsx
-│   │   └── SignInPage.tsx
-│   ├── contexts/
-│   │   └── ThemeContext.tsx    # Global theme state
-│   ├── styles/
-│   │   ├── globals.css
-│   │   └── index.css
-│   ├── App.tsx                 # Main app component
-│   ├── main.tsx                # Entry point
-│   ├── routes.ts               # Route definitions
-│   └── Attributions.md
-├── index.html                  # HTML entry point
-├── vite.config.ts              # Vite configuration
-├── package.json                # Dependencies and scripts
-├── .gitignore                  # Git ignore rules
-└── README.md                   # This file
-```
-
----
-
-## 🎨 Component Library
-
-### Layout Components
-- Accordion, Alert Dialog, Drawer, Dialog, Popover
-- Sheet, Sidebar, Scroll Area, Resizable Panels
-- Navigation Menu, Menubar, Breadcrumb
-
-### Form Components
-- Input, Textarea, Select, Checkbox, Radio Group
-- Toggle, Toggle Group, Switch, Label
-- Input OTP, Slider, Calendar, Command
-
-### Display Components
-- Button, Badge, Card, Avatar
-- Table, Carousel, Progress, Skeleton
-- Tabs, Pagination, Separator, Aspect Ratio
-
-### Feedback Components
-- Alert, Toast (Sonner), Hover Card
-- Tooltip, Context Menu, Dropdown Menu
-
----
-
-## 🚦 Getting Started
-
-### Development
-```bash
-# Start the development server with hot reload
-npm run dev
-```
-
-The application will be available at `http://localhost:5173`
-
-### Production Build
-```bash
-# Create optimized production build
-npm run build
-
-# Preview the production build
-npm run preview
-```
-
-### Environment Variables
-Create a `.env.local` file for local environment variables:
-```env
-# Add your environment variables here
-VITE_API_URL=your_api_url
+├── backend/                # Node.js + Express Backend
+│   ├── server.js           # Main server file with Auth API
+│   ├── package.json
+│   └── .env
+│
+├── frontend/               # React + Vite Frontend
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Application pages (SignUp, SignIn, Home...)
+│   │   ├── contexts/       # Global state (Theme)
+│   │   ├── App.tsx         # Main entry component
+│   │   └── routes.ts       # Route definitions
+│   ├── index.html
+│   ├── vite.config.ts
+│   └── package.json
+│
+└── README.md               # Project documentation
 ```
 
 ---
@@ -207,40 +134,11 @@ VITE_API_URL=your_api_url
 
 | Page | Purpose | Features |
 |------|---------|----------|
-| **Home** | Landing page | Hero section, features overview, call-to-action |
-| **Features** | Feature showcase | Detailed feature descriptions with benefits |
-| **Pricing** | Pricing plans | Subscription tiers and pricing information |
-| **About** | Company info | Team information and company background |
-| **Resources** | Knowledge base | Documentation and helpful resources |
-| **Sign In** | Authentication | User login and registration |
-
----
-
-## 🎯 Key Features Explained
-
-### 🌓 Dark Mode Support
-- Automatic theme detection
-- Manual theme toggle
-- Persistent theme preference
-- Smooth transitions
-
-### 📱 Responsive Design
-- Mobile-first approach
-- Tablet optimization
-- Desktop experience
-- Flexible layout system
-
-### ♿ Accessibility
-- Semantic HTML
-- ARIA labels and roles
-- Keyboard navigation
-- Screen reader support
-
-### 🔐 Type Safety
-- Full TypeScript support
-- Type-safe routing
-- Component prop types
-- Error prevention
+| **Home** | Landing page | Hero section, features overview |
+| **Sign Up** | Registration | Create new account (connected to backend) |
+| **Sign In** | Login | User authentication (connected to backend) |
+| **Dashboard** | Analytics | (Coming Soon) |
+| **Pricing** | Plans | Subscription information |
 
 ---
 
@@ -262,19 +160,12 @@ This project is private and proprietary.
 
 ---
 
-## 📞 Support
-
-For support, questions, or feedback, please contact the development team.
-
----
-
 <div align="center">
 
 ### Built by Ratul Rahman
 
 **ServeSync** - Transforming Restaurant Management
 
-[⬆ Back to top](#-servesynce---restaurant-management-saas)
+[⬆ Back to top](#-servesync---restaurant-management-saas)
 
 </div>
-
