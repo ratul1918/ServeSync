@@ -9,6 +9,7 @@ import SignUpPage from "./pages/SignUpPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/DashboardLayout";
 import DashboardPage from "./pages/dashboard/DashboardPage";
+import MenuPage from "./pages/dashboard/MenuPage";
 
 export const router = createBrowserRouter([
   {
@@ -17,42 +18,42 @@ export const router = createBrowserRouter([
   },
   {
     element: <ProtectedRoute />,
-      children: [
+    children: [
       {
         path: "/dashboard",
         element: <DashboardLayout />,
-              children: [
+        children: [
           { index: true, element: <DashboardPage /> },
           { path: "orders", element: <div>Orders Page(Coming Soon)</div> },
-      { path: "menu", element: <div>Menu Page(Coming Soon)</div> },
-  { path: "staff", element: <div>Staff Manage(Coming Soon)</div> },
-{ path: "settings", element: <div>Settings(Coming Soon) </div> },
-              ]
-          }
-      ]
+          { path: "menu", element: <MenuPage /> },
+          { path: "staff", element: <div>Staff Manage(Coming Soon)</div> },
+          { path: "settings", element: <div>Settings(Coming Soon) </div> },
+        ]
+      }
+    ]
   },
-{
-  path: "/features",
+  {
+    path: "/features",
     Component: FeaturesPage,
   },
-{
-  path: "/pricing",
+  {
+    path: "/pricing",
     Component: PricingPage,
   },
-{
-  path: "/resources",
+  {
+    path: "/resources",
     Component: ResourcesPage,
   },
-{
-  path: "/about",
+  {
+    path: "/about",
     Component: AboutPage,
   },
-{
-  path: "/signin",
+  {
+    path: "/signin",
     Component: SignInPage,
   },
-{
-  path: "/signup",
+  {
+    path: "/signup",
     Component: SignUpPage,
   },
 ]);
