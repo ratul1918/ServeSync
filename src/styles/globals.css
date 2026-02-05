@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
+@custom-variant embedded (&:is(.embedded *));
+
+:root {
+  --font-size: 16px;
+  
+  /* ServeSync Brand Colors - Dark Mode First */
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.18 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.6 0 0);
+  --accent: oklch(0.18 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.55 0.25 25);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.22 0 0);
+  --input: oklch(0.22 0 0);
+  --ring: oklch(0.439 0 0);
+  
+  /* Neon Green Accent */
+  --neon-green: oklch(0.85 0.22 142);
+  --neon-green-glow: oklch(0.85 0.22 142 / 0.5);
+  
+  /* Warm Orange Accent */
+  --warm-orange: oklch(0.75 0.18 55);
+  --warm-orange-glow: oklch(0.75 0.18 55 / 0.5);
+  
+  /* Glassmorphism */
+  --glass-bg: oklch(0.15 0 0 / 0.4);
+  --glass-border: oklch(0.3 0 0 / 0.3);
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 1rem;
+  
+  /* Custom Typography Scale */
+  --font-heading: 'Clash Display', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  
+  /* Expressive Font Sizes */
+  --text-hero: clamp(3.5rem, 8vw, 8rem);
+  --text-hero-sub: clamp(2.5rem, 5vw, 5rem);
+  --text-display: clamp(2.5rem, 4vw, 4rem);
+  --text-heading-xl: clamp(2rem, 3vw, 3rem);
+  --text-heading-lg: clamp(1.5rem, 2vw, 2.25rem);
+  --text-heading-md: 1.25rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}
+
+/* Light Theme - Super Premium Edition */
+.light {
+  /* Pure white - clean and minimal */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.08 0.01 250);
+  
+  /* Bright white cards */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.08 0.01 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.08 0.01 250);
+  
+  /* Rich black primary */
+  --primary: oklch(0.08 0.015 250);
+  --primary-foreground: oklch(1 0 0);
+  
+  /* Ultra-light gray secondary */
+  --secondary: oklch(0.97 0.003 250);
+  --secondary-foreground: oklch(0.08 0.01 250);
+  
+  /* Elegant muted tones */
+  --muted: oklch(0.96 0.005 250);
+  --muted-foreground: oklch(0.45 0.015 250);
+  
+  /* Subtle accent */
+  --accent: oklch(0.97 0.005 85);
+  --accent-foreground: oklch(0.08 0.01 250);
+  
+  /* Refined destructive */
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  
+  /* Minimal borders */
+  --border: oklch(0.93 0.005 250);
+  --input: oklch(0.95 0.005 250);
+  --ring: oklch(0.6 0.03 250);
+  
+  /* Vibrant but refined accent colors for light mode */
+  --neon-green: oklch(0.60 0.22 150);
+  --neon-green-glow: oklch(0.60 0.22 150 / 0.15);
+  
+  --warm-orange: oklch(0.58 0.20 40);
+  --warm-orange-glow: oklch(0.58 0.20 40 / 0.15);
+  
+  /* Premium glassmorphism with subtle frosted effect */
+  --glass-bg: oklch(1 0 0 / 0.85);
+  --glass-border: oklch(0.90 0.005 250 / 0.5);
+}
+
+/* Embedded Theme - Minimal, neutral design */
+.embedded {
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.95 0 0);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.25 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.3 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.25 0 0);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.55 0.25 25);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.3 0 0);
+  --ring: oklch(0.5 0 0);
+  
+  --glass-bg: oklch(0.22 0 0 / 0.5);
+  --glass-border: oklch(0.35 0 0 / 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-neon-green: var(--neon-green);
+  --color-warm-orange: var(--warm-orange);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Light mode subtle texture overlay */
+  .light body {
+    position: relative;
+  }
+  
+  .light body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.015;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' /%3E%3C/svg%3E");
+  }
+  
+  /* Base Typography with Custom Styling */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+  }
+}
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--neon-green) 0%, var(--warm-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, var(--neon-green) 0%, oklch(0.75 0.18 170) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, var(--warm-orange) 0%, oklch(0.7 0.2 35) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Text Glow Effects */
+.text-glow-green {
+  text-shadow: 
+    0 0 20px var(--neon-green-glow),
+    0 0 40px var(--neon-green-glow),
+    0 0 60px var(--neon-green-glow);
+}
+
+.text-glow-orange {
+  text-shadow: 
+    0 0 20px var(--warm-orange-glow),
+    0 0 40px var(--warm-orange-glow);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Dark mode glass card shadows */
+.dark .glass-card {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Light mode glass card shadows - Premium subtle depth */
+.light .glass-card {
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 16px 48px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Embedded mode glass card shadows */
+.embedded .glass-card {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Monospace Tech Font for Data */
+.font-mono-tech {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Premium Light Mode Enhancements */
+.light .glass-card:hover {
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    0 12px 32px rgba(0, 0, 0, 0.08),
+    0 24px 64px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  border-color: oklch(0.88 0.008 250 / 0.6);
+}
+
+/* Light mode premium button states */
+.light button:hover,
+.light a:hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode backdrop blur enhancement */
+.light .glass-card {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
