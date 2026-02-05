@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Navbar } from "../components/Navbar";
 import { Mail, Lock, ArrowRight, Chrome, Github } from "lucide-react";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
