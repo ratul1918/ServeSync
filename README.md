@@ -162,7 +162,7 @@ This project is private and proprietary.
 
 <div align="center">
 
-### Built by Ratul Rahman
+### Built by Rafiur Rahman
 
 **ServeSync** - Transforming Restaurant Management
 
