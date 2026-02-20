@@ -1,4 +1,4 @@
-# 🍽️ ServeSync - Restaurant Management SaaS
+ # 🍽️ ServeSync - Restaurant Management SaaS
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss)](https://tailwindcss.com)
  
 *A modern, feature-rich SaaS platform for restaurant management and operations*
-
+ 
 [Features](#-features) • [Getting Started](#-getting-started) • [Tech Stack](#-tech-stack) • [Project Structure](#-project-structure)
 
 </div>
