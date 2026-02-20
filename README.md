@@ -19,7 +19,7 @@
 ---
 
 ## 🎯 Overview
-
+ 
 ServeSync is a comprehensive restaurant management SaaS application built with modern web technologies. It provides an intuitive interface for managing restaurant operations, staff, inventory, and customer relationships efficiently.
 
 The project is structured as a monorepo with a distinct **Frontend** (React + Vite) and **Backend** (Node.js + Express).
