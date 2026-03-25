@@ -10,6 +10,6 @@ export default function App() {
       <AuthProvider>
         <RouterProvider router={router} /> 
       </AuthProvider>
-    </ThemeProvider>
+    </ThemeProvider> 
   );
 }
