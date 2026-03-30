@@ -6,7 +6,7 @@
 [![React](https://img.shields.io/badge/React-18.3.1-61dafb?logo=react)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-6.3.5-646cff?logo=vite)](https://vitejs.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js)](https://nodejs.org)
-[![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express)](https://expressjs.com) 
+[![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express)](https://expressjs.com)  
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss)](https://tailwindcss.com)
  
